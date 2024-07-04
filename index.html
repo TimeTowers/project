@@ -180,7 +180,8 @@
       body {
          font: 1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
          color: #222;
-         margin: .5em
+         margin: .5em;
+         height: 100vh;
       }
 
       tw-story {
@@ -243,7 +244,7 @@ a:hover {
 
 /* title */
 h1 {
-   margin-bottom: 20px;
+   margin-bottom: 5px;
   text-align: center;
    background-image: linear-gradient(to left, #FFB700, #FF7B00);
   color: transparent;
@@ -505,33 +506,67 @@ background-position: right center;
 .main-container.credits {
    height: 100%;
 }
+
+.collaboration {
+   left: 50%; /* Center horizontally */
+   transform: translateX(-50%); /* Adjust for centering */
+   width: 100%; /* Ensure full width */
+   text-align: center;
+   color: #9d9d9d;
+   position: absolute; 
+   bottom: 50px;
+}
+
+.collaboration a {
+   color: #9d9d9d;
+}
+
+.warning {
+   left: 50%; /* Center horizontally */
+   transform: translateX(-50%); /* Adjust for centering */
+   width: 100%; /* Ensure full width */
+   text-align: center;
+   color: #9d9d9d;
+   position: absolute; 
+   bottom: 50px;
+}
+
 </style>
       <script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="h1"
-         color="none"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="550,225" size="100,100">&lt;div
-         class=&#39;main-container&#39;&gt;
-         &lt;div class=&#39;sub-container&#39;&gt;&lt;h1 gradient-text&gt;Welcome to TimeTowers!&lt;/h1&gt;
-         &lt;h3 style=&quot;text-align: center&quot;&gt;Explore the history of the &lt;b&gt;Asinelli&lt;/b&gt; and
-         &lt;b&gt;Garisenda&lt;/b&gt; towers like never before.&lt;/h3&gt;&lt;p&gt;TwineTowers is a &lt;b&gt;augmented
-         reality web app&lt;/b&gt; that uses &lt;b&gt;3D modeling&lt;/b&gt; technology to bring the past to
-         life.&lt;/p&gt;
-         &lt;p&gt;With TwineTowers, you can witness the historical transformations of these iconic structures over the
-         centuries. &lt;/p&gt;
-         &lt;div class=&quot;options start&quot;&gt;
-         [[&lt;button class=&quot;animated-button&quot;&gt;Begin&lt;/button&gt; | Frame the model]]&lt;/div&gt;
+         color="none"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="550,225" size="100,100">
+         <div class='main-container'>
+            <div class='sub-container'>
+               <h1 gradient-text>Welcome to TimeTowers!</h1>
+               <h3 style="text-align: center">Explore the history of the <b>Asinelli</b> and
+                  <b>Garisenda</b> towers like never before.
+               </h3>
+               <p>TwineTowers is a <b>augmented
+                     reality web app</b> that uses <b>3D modeling</b> technology to bring the past to
+                  life.</p>
+               <p>With TwineTowers, you can witness the historical transformations of these iconic structures over the
+                  centuries. </p>
+               <div class="options start">
+                  [[<button class="animated-button">Begin</button> | Frame the model]]</div>
+               <p class="collaboration">In collaboration with <a href="https://www.museibologna.it/medievale/">Museo
+                     Civico Medievale</a></p>
 
-         &lt;p class="credits"&gt;[[ © Credits | Credits ]]&lt;/p&gt;&lt;/div&gt;
-         &lt;/div&gt;
-         &lt;/div&gt;&lt;/div&gt;
+               <p class="credits">[[ © Credits | Credits ]]</p>
+            </div>
+         </div>
+         </div>
+         </div>
 
-      </tw-passagedata><tw-passagedata pid="2" name=" Frame the model" tags="" position="550,350" size="100,100">&lt;div
-         class=&#39;main-container&#39;&gt;
-         &lt;div class=&#39;sub-container&#39;&gt;To start your journey through time, frame the model of the two towers
-         with your device.
+      </tw-passagedata><tw-passagedata pid="2" name=" Frame the model" tags="" position="550,350" size="100,100">
+         <div class='main-container'>
+            <div class='sub-container'>To start your journey through time, frame the model of the two towers
+               with your device.
 
-         &lt;div class=&quot;options start&quot;&gt;
-         [[&lt;button class=&quot;animated-button&quot;&gt;Done&lt;/button&gt; | First model ]]&lt;/div&gt;
-         &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name=" First model " tags=""
-         position="550,475" size="100,100">&lt;!DOCTYPE html&gt;
+               <div class="options start">
+                  [[<button class="animated-button">Done</button> | First model ]]</div>
+            </div>
+         </div>
+      </tw-passagedata><tw-passagedata pid="3" name=" First model " tags="" position="550,475"
+         size="100,100">&lt;!DOCTYPE html&gt;
          &lt;html lang=&quot;en&quot;&gt;
 
          &lt;head&gt;
@@ -550,50 +585,60 @@ background-position: right center;
 
 
          &lt;body&gt;
-         &lt;div class=&quot;container&quot;&gt;
-         &lt;h1 gradient-text&gt;12th century&lt;/h1&gt;
-         &lt;div class=&quot;model&quot;&gt;&lt;/div&gt;
-         &lt;div class=&quot;intro-text&quot;&gt;The Two Towers were built in the 12th century. Click on one of the two
-         towers
-         to
-         learn more.&lt;/div&gt;
-         &lt;div class=&quot;model-container&quot;&gt;
-         &lt;iframe style=&#39;height:500px;&#39; src=&#39;https://aton.ispc.cnr.it/s/vhlab/demo/skyphos&#39;
-         width=&#39;100%&#39; height=&#39;500px&#39;
-         frameborder=&#39;0&#39; allow=&#39;autoplay; fullscreen; xr-spatial-tracking&#39; xr-spatial-tracking
-         execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen
-         mozallowfullscreen=&#39;true&#39; webkitallowfullscreen=&#39;true&#39;&gt;&lt;/iframe&gt;
-         &lt;div class=&quot;descriptions &quot;&gt;
-         &lt;div class=&quot;button-container&quot;&gt;
-         &lt;button id=&quot;garisenda&quot; class=&quot;animated-button&quot;&gt;Click on Garisenda&lt;/button&gt;
-         &lt;button id=&quot;asinelli&quot; class=&quot;animated-button&quot;&gt;Click on
-         Asinelli&lt;/button&gt;&lt;/div&gt;
-         &lt;div class=&quot;descriptions-text&quot;&gt;
-         &lt;p class=&#39;garisenda&#39;&gt;Constructed in the <b>early 12th century</b>, Garisenda Tower originally
-         stood
-         approximately
-         60
-         meters tall. Its design,
-         characterized by a notable lean, was a response to the <b>soft soil foundation, which affected its
-            stability
-            over
-            time</b>.&lt;/p&gt;
-         &lt;p class=&#39;asinelli&#39;&gt;Asinelli Tower, built between 1109 and 1119, was designed primarly for
-         <b>military</b> and
-         defensive
-         purposes. Towering over Bologna, it originally served as a watchtower and symbol of the city&#39;s civic
-         pride
-         and
-         military strength. &lt;/p&gt;
-         &lt;/div&gt;
-         &lt;/div&gt;
+         <div class="container">
+            <h1 gradient-text>12th century</h1>
+            <div class="model"></div>
+            <div class="intro-text">The Two Towers were built in the 12th century. Click on one of the two
+               towers
+               to
+               learn more.</div>
+            <div class="model-container">
+               <div class="sketchfab-embed-wrapper"> <iframe title="Wooden structures" frameborder="0" allowfullscreen
+                     mozallowfullscreen="true" webkitallowfullscreen="true"
+                     allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                     execution-while-out-of-viewport execution-while-not-rendered web-share width="800" height="480"
+                     src="https://sketchfab.com/models/16d1097da5f7497bb6854a182cd2a850/embed"> </iframe>
 
-         &lt;/div&gt;
-         &lt;/div&gt;
-         &lt;div class=&quot;options&quot;&gt;
-         [[ &lt;button class=&quot;basic-button&quot;&gt;Go to the next model &lt;/button&gt;| Tower Functions]]
-         [[ &lt;button class=&quot;basic-button&quot;&gt;Choose from the timeline &lt;/button&gt;| timeline]]
-         &lt;/div&gt;
+
+               </div>
+               <div class="descriptions ">
+                  <div class="button-container">
+                     <button id="garisenda" class="animated-button">Click on Garisenda</button>
+                     <button id="asinelli" class="animated-button">Click on
+                        Asinelli</button>
+                  </div>
+                  <div class="descriptions-text">
+                     <p class='garisenda'>Constructed in the <b>early 12th century</b>, Garisenda Tower originally
+                        stood
+                        approximately
+                        60
+                        meters tall. Its design,
+                        characterized by a notable lean, was a response to the <b>soft soil foundation, which affected
+                           its
+                           stability
+                           over
+                           time</b>.
+                        While we cannot be certain of the original appearance of the towers, it is believed that there
+                        were additional wooden
+                        structures leaning against their sides.</p>
+                     <p class='asinelli'>Asinelli Tower, built between 1109 and 1119, was designed primarly for
+                        <b>military</b> and
+                        defensive
+                        purposes. Towering over Bologna, it originally served as a watchtower and symbol of the city's
+                        civic
+                        pride
+                        and
+                        military strength.
+                     </p>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+         <div class="options">
+            [[ <button class="basic-button">Go to the next model </button>| Tower Functions]]
+            [[ <button class="basic-button">Choose from the timeline </button>| timeline]]
+         </div>
 
 
          &lt;script&gt;
@@ -618,8 +663,9 @@ background-position: right center;
          &lt;/script&gt;
          &lt;/body&gt;
 
-         &lt;/html&gt;</tw-passagedata><tw-passagedata pid="4" name=" timeline" tags="" position="825,625"
-         size="100,100">&lt;!DOCTYPE html&gt;
+         &lt;/html&gt;
+      </tw-passagedata><tw-passagedata pid="4" name=" timeline" tags="" position="825,625" size="100,100">&lt;!DOCTYPE
+         html&gt;
          &lt;html lang=&quot;en&quot;&gt;
 
          &lt;head&gt;
@@ -690,11 +736,13 @@ background-position: right center;
          During this century, the towers underwent structural changes to adapt to the new needs of the city, click on
          each tower to find out more:&lt;/div&gt;
          &lt;div class=&quot;model-container&quot;&gt;
-         &lt;iframe style=&#39;height:500px;&#39; src=&#39;https://aton.ispc.cnr.it/s/vhlab/demo/skyphos&#39;
-         width=&#39;100%&#39; height=&#39;500px&#39;
-         frameborder=&#39;0&#39; allow=&#39;autoplay; fullscreen; xr-spatial-tracking&#39; xr-spatial-tracking
-         execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen
-         mozallowfullscreen=&#39;true&#39; webkitallowfullscreen=&#39;true&#39;&gt;&lt;/iframe&gt;
+         <div class="sketchfab-embed-wrapper"> <iframe title="Corridore" frameborder="0" allowfullscreen
+               mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+               xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="800"
+               height="480" src="https://sketchfab.com/models/1f6f0c4a333847c1939cae3ef2e807d6/embed"> </iframe></div>
+
+
+         </div>
          &lt;div class=&quot;descriptions &quot;&gt;
          &lt;div class=&quot;button-container&quot;&gt;
          &lt;button id=&quot;garisenda&quot; class=&quot;animated-button&quot;&gt;Click on Garisenda&lt;/button&gt;
@@ -741,7 +789,8 @@ background-position: right center;
          &lt;/script&gt;
          &lt;/body&gt;
 
-         &lt;/html&gt;</tw-passagedata><tw-passagedata pid="6" name=" Third model" tags="" position="425,850"
+         &lt;/html&gt;
+      </tw-passagedata><tw-passagedata pid="6" name=" Third model" tags="" position="425,850"
          size="100,100">&lt;!DOCTYPE html&gt;
          &lt;html lang=&quot;en&quot;&gt;
 
@@ -767,11 +816,12 @@ background-position: right center;
          &lt;div class=&quot;intro-text&quot;&gt;Through the centuries the towers have survived many catastrophes, click
          on the wooden structure on the Garisenda to discover the first one.&lt;/div&gt;
          &lt;div class=&quot;model-container&quot;&gt;
-         &lt;iframe style=&#39;height:500px;&#39; src=&#39;https://aton.ispc.cnr.it/s/vhlab/demo/skyphos&#39;
-         width=&#39;100%&#39; height=&#39;500px&#39;
-         frameborder=&#39;0&#39; allow=&#39;autoplay; fullscreen; xr-spatial-tracking&#39; xr-spatial-tracking
-         execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen
-         mozallowfullscreen=&#39;true&#39; webkitallowfullscreen=&#39;true&#39;&gt;&lt;/iframe&gt;
+         <div class="sketchfab-embed-wrapper"> <iframe title="Asinelli No Base" frameborder="0" allowfullscreen
+               mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+               xr-spatial-tracking width="800" height="480" execution-while-out-of-viewport execution-while-not-rendered
+               web-share src="https://sketchfab.com/models/9b0981aea8024a1ab5b53b95b4042561/embed"> </iframe>
+
+         </div>
          &lt;div class=&quot;descriptions &quot;&gt;
          &lt;div class=&quot;button-container&quot;&gt;
          &lt;button id=&quot;garisenda&quot; class=&quot;animated-button&quot;&gt;Click on the wooden
@@ -819,7 +869,8 @@ background-position: right center;
          &lt;/script&gt;
          &lt;/body&gt;
 
-         &lt;/html&gt;</tw-passagedata><tw-passagedata pid="7" name=" Fourth model" tags="" position="525,1050"
+         &lt;/html&gt;
+      </tw-passagedata><tw-passagedata pid="7" name=" Fourth model" tags="" position="525,1050"
          size="100,100">&lt;!DOCTYPE html&gt;
          &lt;html lang=&quot;en&quot;&gt;
 
@@ -838,54 +889,59 @@ background-position: right center;
 
 
 
-         &lt;body&gt;
-         &lt;div class=&quot;container&quot;&gt;
-         &lt;h1 gradient-text&gt;1448 - 1488&lt;/h1&gt;
-         &lt;div class=&quot;model&quot;&gt;&lt;/div&gt;
-         &lt;div class=&quot;intro-text&quot;&gt;The appearance of the towers was altered according to their purpose
-         during different periods. Click on the wooden fortification - the &lt;i&gt; rocchetta&lt;/i&gt; - to learn
-         more.&lt;/div&gt;
-         &lt;div class=&quot;model-container&quot;&gt;
-         &lt;iframe style=&#39;height:500px;&#39; src=&#39;https://aton.ispc.cnr.it/s/vhlab/demo/skyphos&#39;
-         width=&#39;100%&#39; height=&#39;500px&#39;
-         frameborder=&#39;0&#39; allow=&#39;autoplay; fullscreen; xr-spatial-tracking&#39; xr-spatial-tracking
-         execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen
-         mozallowfullscreen=&#39;true&#39; webkitallowfullscreen=&#39;true&#39;&gt;&lt;/iframe&gt;
-         &lt;div class=&quot;descriptions &quot;&gt;&lt;div class=&quot;button-container&quot;&gt;
-         &lt;button id=&quot;garisenda&quot; class=&quot;animated-button&quot;&gt;Click on the rocchetta
-         &lt;/button&gt;&lt;/div&gt;
+         <body>
+            <div class="container">
+               <h1 gradient-text>1448 - 1488</h1>
+               <div class="model"></div>
+               <div class="intro-text">The appearance of the towers was altered according to their purpose
+                  during different periods. Click on the wooden fortification - the <i> rocchetta</i> - to learn
+                  more.</div>
+               <div class="model-container">
+                  <div class="sketchfab-embed-wrapper"> <iframe title="Rocchetta" frameborder="0" allowfullscreen
+                        mozallowfullscreen="true" webkitallowfullscreen="true"
+                        allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                        execution-while-out-of-viewport execution-while-not-rendered web-share width="800" height="480"
+                        src="https://sketchfab.com/models/98219a0eec494632bc21695fc2f42576/embed"> </iframe></div>
+                  <div class="descriptions ">
+                     <div class="button-container">
+                        <button id="garisenda" class="animated-button">Click on the rocchetta
+                        </button>
+                     </div>
 
-         &lt;div class=&quot;descriptions-text&quot;&gt;
-         &lt;p class=&#39;garisenda&#39;&gt;Between 1448 and 1488, a small fortress or
-         &lt;b&gt;&#39;rocchetta&#39;&lt;/b&gt; was constructed around the base of Asinelli Tower. This fortification
-         was intended to provide &lt;b&gt;additional defense&lt;/b&gt; against external threats and to fortify the
-         city&#39;s military presence&lt;/p&gt;
+                     <div class="descriptions-text">
+                        <p class='garisenda'>Between 1448 and 1488, a small fortress or
+                           <b>'rocchetta'</b> was constructed around the base of Asinelli Tower. This fortification
+                           was intended to provide <b>additional defense</b> against external threats and to fortify
+                           the
+                           city's military presence
+                        </p>
 
-         &lt;/div&gt;
-         &lt;/div&gt;
-         &lt;/div&gt;
+                     </div>
+                  </div>
+               </div>
 
-         &lt;/div&gt;
-         &lt;/div&gt;
-         &lt;div class=&quot;options&quot;&gt;
-         [[ &lt;button class=&quot;basic-button&quot;&gt;Go to the next model &lt;/button&gt;| Fifth model]]
-         [[ &lt;button class=&quot;basic-button&quot;&gt;Choose from the timeline &lt;/button&gt;| timeline]]
-         &lt;/div&gt;
-
-
-         &lt;script&gt;
-         document.querySelector(&#39;#garisenda&#39;).addEventListener(&#39;click&#39;, function () {
-         document.querySelector(&#39;p.garisenda&#39;).classList.remove(&#39;hidden&#39;);
-         document.querySelector(&#39;p.garisenda&#39;).classList.add(&#39;visible&#39;);
-         });
+            </div>
+            </div>
+            <div class="options">
+               [[ <button class="basic-button">Go to the next model </button>| Fifth model]]
+               [[ <button class="basic-button">Choose from the timeline </button>| timeline]]
+            </div>
 
 
+            &lt;script&gt;
+            document.querySelector(&#39;#garisenda&#39;).addEventListener(&#39;click&#39;, function () {
+            document.querySelector(&#39;p.garisenda&#39;).classList.remove(&#39;hidden&#39;);
+            document.querySelector(&#39;p.garisenda&#39;).classList.add(&#39;visible&#39;);
+            });
 
 
-         &lt;/script&gt;
-         &lt;/body&gt;
 
-         &lt;/html&gt;</tw-passagedata><tw-passagedata pid="8" name=" Fifth model" tags="" position="750,1100"
+
+            &lt;/script&gt;
+            &lt;/body&gt;
+
+            &lt;/html&gt;
+      </tw-passagedata><tw-passagedata pid="8" name=" Fifth model" tags="" position="750,1100"
          size="100,100">&lt;!DOCTYPE html&gt;
          &lt;html lang=&quot;en&quot;&gt;
 
@@ -912,19 +968,20 @@ background-position: right center;
          &lt;div class=&quot;intro-text&quot;&gt;The towers faced many adversities: earthquakes, fires, and wars.
          However, their main enemy was &lt;b&gt;lightning&lt;/b&gt;. Click on the bas-relief to learn more.&lt;/div&gt;
          &lt;div class=&quot;model-container&quot;&gt;
-         &lt;iframe style=&#39;height:500px;&#39; src=&#39;https://aton.ispc.cnr.it/s/vhlab/demo/skyphos&#39;
-         width=&#39;100%&#39; height=&#39;500px&#39;
-         frameborder=&#39;0&#39; allow=&#39;autoplay; fullscreen; xr-spatial-tracking&#39; xr-spatial-tracking
-         execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen
-         mozallowfullscreen=&#39;true&#39; webkitallowfullscreen=&#39;true&#39;&gt;&lt;/iframe&gt;
+         <div class="sketchfab-embed-wrapper"> <iframe title="DetailsFront" frameborder="0" allowfullscreen
+               mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+               xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="800"
+               height="480" src="https://sketchfab.com/models/9da8ac9b109e48da87e1decd92834255/embed"> </iframe></div>
          &lt;div class=&quot;descriptions &quot;&gt;&lt;div class=&quot;button-container&quot;&gt;
          &lt;button id=&quot;garisenda&quot; class=&quot;animated-button&quot;&gt;Click on the bas-relief
          &lt;/button&gt;&lt;/div&gt;
 
          &lt;div class=&quot;descriptions-text&quot;&gt;
 
-         &lt;p class=&#39;garisenda&#39;&gt;In 1727, a &lt;b&gt;bassorilievo&lt;/b&gt; (bas-relief) designed to protect
-         against lightning was installed on Asinelli Tower. This ornamental yet functional feature was part of broader
+         &lt;p class=&#39;garisenda&#39;&gt;In 1727, a &lt;b&gt;bassorilievo&lt;/b&gt; (bas-relief) designed to
+         protect
+         against lightning was installed on Asinelli Tower. This ornamental yet functional feature was part of
+         broader
          efforts to safeguard the tower from frequent lightning strikes.&lt;/p&gt;
 
          &lt;/div&gt;
@@ -951,7 +1008,8 @@ background-position: right center;
          &lt;/script&gt;
          &lt;/body&gt;
 
-         &lt;/html&gt;</tw-passagedata><tw-passagedata pid="9" name=" Sixth model" tags="" position="975,925"
+         &lt;/html&gt;
+      </tw-passagedata><tw-passagedata pid="9" name=" Sixth model" tags="" position="975,925"
          size="100,100">&lt;!DOCTYPE html&gt;
          &lt;html lang=&quot;en&quot;&gt;
 
@@ -979,11 +1037,13 @@ background-position: right center;
             wrath of the heavens, but in
             1824 this danger was finally defeated.</div>
          &lt;div class=&quot;model-container&quot;&gt;
-         &lt;iframe style=&#39;height:500px;&#39; src=&#39;https://aton.ispc.cnr.it/s/vhlab/demo/skyphos&#39;
-         width=&#39;100%&#39; height=&#39;500px&#39;
-         frameborder=&#39;0&#39; allow=&#39;autoplay; fullscreen; xr-spatial-tracking&#39; xr-spatial-tracking
-         execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen
-         mozallowfullscreen=&#39;true&#39; webkitallowfullscreen=&#39;true&#39;&gt;&lt;/iframe&gt;
+         <div class="sketchfab-embed-wrapper"> <iframe title="LightningRod" frameborder="0" allowfullscreen
+               mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+               xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="800"
+               height="480" src="https://sketchfab.com/models/150f71c05b0a4cfda23c00d4b278c3ef/embed"> </iframe></div>
+
+         </div>
+         </div>
          &lt;div class=&quot;descriptions &quot;&gt;
          <div class="button-container">
             &lt;button id=&quot;garisenda&quot; class=&quot;animated-button&quot;&gt;Click on the lightning
@@ -1041,6 +1101,8 @@ background-position: right center;
 
          [[&lt;button class=&quot;animated-button&quot;&gt;Start Again|Start]]&lt;/button&gt;
 
+         <p class="warning">Warning: The 3D models are conjectures based on historical descriptions.</p>
+
          &lt;/div&gt;
 
          &lt;p class="credits"&gt;[[ © Credits | Credits ]]&lt;/p&gt;&lt;/div&gt;
@@ -1054,7 +1116,7 @@ background-position: right center;
                <img class="logo" src="images/logo.png">
                <p>
 
-               <p style="text-align: center; padding: 20px;"><a href=https://github.com/TimeTowers/project"
+               <p style="text-align: center; padding: 20px;"><a href="https://github.com/TimeTowers/project"
                      class="github-link">
                      <img src="images/github.png" alt="GitHub Icon" class="github-icon">
                      Github
@@ -1070,6 +1132,7 @@ background-position: right center;
 
                <p class="single-credit">CSS List Item Hover Effect by <a href=" https://codepen.io/porsake">Porsake</a>
                </p>
+
                </p>
 
 
@@ -1105,11 +1168,10 @@ background-position: right center;
          &lt;div class=&quot;intro-text&quot;&gt;Asinelli and Garisenda had multiple social and economic functions
          throughout their history. Discover them by clicking on different parts of the model.&lt;/div&gt;
          &lt;div class=&quot;model-container&quot;&gt;
-         &lt;iframe style=&#39;height:500px;&#39; src=&#39;https://aton.ispc.cnr.it/s/vhlab/demo/skyphos&#39;
-         width=&#39;100%&#39; height=&#39;500px&#39;
-         frameborder=&#39;0&#39; allow=&#39;autoplay; fullscreen; xr-spatial-tracking&#39; xr-spatial-tracking
-         execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen
-         mozallowfullscreen=&#39;true&#39; webkitallowfullscreen=&#39;true&#39;&gt;&lt;/iframe&gt;
+         <div class="sketchfab-embed-wrapper"> <iframe title="Asinelli Cage" frameborder="0" allowfullscreen
+               mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+               xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="800"
+               height="480" src="https://sketchfab.com/models/fd750001d04448a8b9112f8f99e82ff8/embed"> </iframe></div>
          &lt;div class=&quot;descriptions &quot;&gt;
          &lt;div class=&quot;button-container&quot;&gt;
          &lt;button id=&quot;garisenda&quot; class=&quot;animated-button&quot;&gt;Click on Asinelli&#39;s
@@ -1160,7 +1222,8 @@ background-position: right center;
          &lt;/script&gt;
          &lt;/body&gt;
 
-         &lt;/html&gt;</tw-passagedata>
+         &lt;/html&gt;
+      </tw-passagedata>
    </tw-storydata>
    <script>
       (function () { function r(e, n, t) { function o(i, f) { if (!n[i]) { if (!e[i]) { var c = "function" == typeof require && require; if (!f && c) return c(i, !0); if (u) return u(i, !0); var a = new Error("Cannot find module '" + i + "'"); throw a.code = "MODULE_NOT_FOUND", a } var p = n[i] = { exports: {} }; e[i][0].call(p.exports, function (r) { var n = e[i][1][r]; return o(n || r) }, p, p.exports, r, e, n, t) } return n[i].exports } for (var u = "function" == typeof require && require, i = 0; i < t.length; i++)o(t[i]); return o } return r })()({
